@@ -87,41 +87,7 @@ class: p-0
 clicks: 2
 ---
 
-<div style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden;">
-  <div
-    style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transition: all 700ms ease-in-out;"
-    :class="$clicks === 0 ? 'translate-y-0 opacity-100 scale-100' : ($clicks === 1 ? 'translate-y--24 opacity-20 scale-92' : 'translate-y--28 opacity-0 scale-90')"
-  >
-    <div class="inline-block w-max max-w-none whitespace-nowrap text-6xl font-cn font-semibold tracking-normal">
-      个人技术能力展示
-    </div>
-  </div>
-
-  <div
-    style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transition: all 700ms ease-in-out;"
-    :class="$clicks < 1 ? 'translate-y-12 opacity-0 scale-96' : ($clicks === 1 ? 'translate-y-0 opacity-100 scale-100' : 'translate-y--28 opacity-100 scale-100')"
-  >
-    <div
-      class="inline-block w-max max-w-none whitespace-nowrap text-4xl font-cn font-semibold leading-tight transition duration-700 ease-in-out"
-    >
-      AI 控制智能家居 · ESP32-S3 端侧项目
-    </div>
-  </div>
-
-  <div
-    style="position: absolute; left: 50%; top: 45%; width: 560px; box-sizing: border-box; text-align: center; border: 1px solid rgba(14,165,233,0.26); background: radial-gradient(circle at 78% 18%, rgba(125,211,252,0.2), transparent 38%), linear-gradient(180deg, rgba(255,255,255,0.82), rgba(224,242,254,0.54)); box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 18px 48px rgba(59,130,246,0.16), 0 0 0 1px rgba(255,255,255,0.34); backdrop-filter: blur(18px) saturate(1.08); -webkit-backdrop-filter: blur(18px) saturate(1.08); border-radius: 16px; padding: 24px 28px;"
-    :style="{
-      opacity: $clicks < 2 ? 0 : 1,
-      filter: $clicks < 2 ? 'blur(4px)' : 'blur(0)',
-      transform: $clicks < 2 ? 'translate(-50%, 40px)' : 'translate(-50%, 0)',
-      transition: 'all 700ms ease-in-out'
-    }"
-  >
-    <p class="font-cn" style="display: block; width: 100%; margin: 0; color: rgba(15,32,51,0.86); font-size: 18px; line-height: 1.8; text-align: center; word-break: normal; overflow-wrap: anywhere;">
-      围绕 ESP32-S3 端侧设备自研的一套 AI 家居控制框架，把“语音唤醒 → 模型对话 → 工具调用 → 硬件执行 → 状态回报”串成完整闭环。
-    </p>
-  </div>
-</div>
+<ProjectIntroSlide />
 
 <!--
 简要讲述这个设备是能做什么的。
